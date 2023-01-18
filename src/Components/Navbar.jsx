@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import {Link} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import LoginModel from "../LoginPage/LoginModel";
 
 function Header() {
-//   const [showLoginModel, setShowLoginModel] = useState(false);
+  const [showLoginModel, setShowLoginModel] = useState(false);
 
-//   const loginModelHanding = () => {
-//     showLoginModel ? setShowLoginModel(false) : setShowLoginModel(true);
-//   };
+  const loginModelHanding = () => {
+    showLoginModel ? setShowLoginModel(false) : setShowLoginModel(true);
+  };
 
   return (
     <div className="header">
@@ -42,8 +42,11 @@ function Header() {
       </div>
 
 
+
       <div className="header__options">
-        <div className='n'>
+        {/* <div className='n'> */}
+        <div className="" onClick={() => loginModelHanding()}>
+
           <button className="header__options--login">Login</button>
         </div>
         <div className="header_options--seller"><p>Become a Seller</p></div>
@@ -53,15 +56,23 @@ function Header() {
         </div>
         <div className="header__options--cart">
           <div className="header__options--cartIcon" />
-          <div className="link cursor d-flex align-center"><span className="https://img.icons8.com/ios-glyphs/2x/shopping-cart.png"></span> </div>
+          {/* <div className="link cursor d-flex align-center"><span className="https://img.icons8.com/ios-glyphs/2x/shopping-cart.png"></span> </div> */}
+          {/* <Link to="/cart" className="link cursor d-flex align-center"><span className="material-icons-outlined">
+                              <span class="glyphicon glyphicon-shopping-cart"></span>
+
+                        </span>Cart</Link> */}
+                        {/* <FontAwesomeIcon icon="fas fa-shopping-cart" /> */}
+                        <Link href="/"><i className="fas fa-shopping-cart">Cart</i></Link>
+                        {/* <i class='fas fa-shopping-cart' style='font-size:36px'></i> */}
+                        {/* <ShoppingCartIcon className="navbar__cartIcon" /> */}
 
           <span>Cart</span>
         </div>
       </div>
-      {/* <LoginModel
+      <LoginModel
         showLoginModel={showLoginModel}
         setShowLoginModel={setShowLoginModel}
-      /> */}
+      />
     </div>
   );
 }
