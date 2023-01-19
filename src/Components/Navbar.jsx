@@ -51,7 +51,7 @@ function Header() {
         </div>
         <div className="header_options--seller"><p>Become a Seller</p></div>
         <div className="header__options--more">
-          <p>More</p>
+          <p>More▽</p>
           <div className="header__options--moreIcon" />
         </div>
         <div className="header__options--cart">
@@ -62,11 +62,13 @@ function Header() {
 
                         </span>Cart</Link> */}
                         {/* <FontAwesomeIcon icon="fas fa-shopping-cart" /> */}
-                        <Link href="/"><i className="fas fa-shopping-cart">Cart</i></Link>
+                        {/* <Link href="/"><i className="fas fa-shopping-cart">Cart</i></Link> */}
                         {/* <i class='fas fa-shopping-cart' style='font-size:36px'></i> */}
                         {/* <ShoppingCartIcon className="navbar__cartIcon" /> */}
-
-          <span>Cart</span>
+              <span> 
+              <a href="cart.html">  {`Cart:`}  </a>
+              </span>
+                     {/* <span>Cart</span> */}
         </div>
       </div>
       <LoginModel
